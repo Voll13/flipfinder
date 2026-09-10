@@ -1,0 +1,25 @@
+{
+  "listing": {
+    "listing": {
+      "ads": [
+        {
+          "id": "rental-100",
+          "url": "/d/oferta/mieszkanie-opole-IDrental100.html",
+          "title": "Mieszkanie do wynajęcia w Opolu",
+          "price": {"regularPrice": {"value": "3300", "currencyCode": "PLN"}},
+          "location": {"cityName": "Opole", "districtName": "Śródmieście", "regionName": "opolskie"},
+          "createdTime": "2026-09-10T16:18:00+02:00",
+          "isBusiness": true,
+          "description": "<p>Opis oferty</p>",
+          "photos": ["https://images.example/rental-1.jpg", "https://images.example/rental-1.jpg", "https://images.example/rental-2.jpg"],
+          "params": [
+            {"key": "unverified_area", "normalizedValue": "55,5 m²"},
+            {"key": "unverified_rooms", "normalizedValue": "2 pokoje"},
+            {"key": "unverified_floor", "normalizedValue": "parter"},
+            {"key": "unverified_feature", "normalizedValue": "wartość"}
+          ]
+        }
+      ]
+    }
+  }
+}
