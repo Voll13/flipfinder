@@ -9,7 +9,7 @@ Open-source платформа анализа выгодных предложе�
 ## Быстрый старт для Windows
 
 ```powershell
-git clone https://github.com/YOUR-ACCOUNT/flipfinder.git
+git clone https://github.com/Voll13/flipfinder.git
 cd flipfinder
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1

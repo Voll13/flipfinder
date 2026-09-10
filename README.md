@@ -6,9 +6,9 @@
 
 ![Release](https://img.shields.io/badge/release-v1.0.0-2f9e74)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776ab)
-![Tests](https://img.shields.io/badge/tests-273%20passing-2f9e74)
+[![Tests](https://github.com/Voll13/flipfinder/actions/workflows/tests.yml/badge.svg)](https://github.com/Voll13/flipfinder/actions/workflows/tests.yml)
 ![License](https://img.shields.io/badge/license-AGPL--3.0--only-8a2be2)
-![GitHub Stars](https://img.shields.io/badge/GitHub%20Stars-pending-lightgrey)
+[![GitHub Stars](https://img.shields.io/github/stars/Voll13/flipfinder?style=flat&label=stars)](https://github.com/Voll13/flipfinder/stargazers)
 
 Open-source marketplace opportunity intelligence platform.
 
@@ -49,7 +49,7 @@ flowchart TD
 2. Clone the repository and enter it:
 
    ```powershell
-   git clone https://github.com/YOUR-ACCOUNT/flipfinder.git
+   git clone https://github.com/Voll13/flipfinder.git
    cd flipfinder
    ```
 
