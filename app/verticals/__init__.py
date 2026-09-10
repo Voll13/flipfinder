@@ -1,0 +1,1 @@
+"""Vertical-specific domain modules."""
