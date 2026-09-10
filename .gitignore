@@ -1,0 +1,48 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Runtime data, databases, logs and local artifacts
+data/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+tmp/
+runtime/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Browser automation state
+.playwright/
+playwright/.cache/
+browser-profile*/
+browser-profiles/
+cookies/
+sessions/
+
+# Local source captures are never release assets
+samples/*.html
+samples/*.html.html
+samples/*.txt
+samples/*.txt.*

@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a reproducible FlipFinder problem without credentials or private data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: FlipFinder version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized logs
+      description: Never include API keys, Telegram tokens, chat IDs, cookies, profiles, or private listing data.
+    validations:
+      required: true
