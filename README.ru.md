@@ -6,6 +6,10 @@ Open-source платформа анализа выгодных предложе�
 
 **Профиль v1: iPhone на OLX Poland.** FlipFinder использует persistent market benchmarks, AI-сигналы риска, deterministic resale и scoring для поиска потенциально выгодных объявлений.
 
+Нужна помощь с установкой или кастомизацией?
+
+[![Связаться в Telegram](https://img.shields.io/badge/Связаться%20в-Telegram-229ED9?logo=telegram&logoColor=white)](https://t.me/t00116)
+
 ## Быстрый старт для Windows
 
 ```powershell

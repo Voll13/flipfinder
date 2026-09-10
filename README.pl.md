@@ -6,6 +6,10 @@ Open-source platforma do analizy okazji na marketplace’ach.
 
 **Profil v1: iPhone na OLX Poland.** FlipFinder łączy trwały benchmark rynku, analizę ryzyka AI, deterministyczną wycenę odsprzedaży i scoring rentowności.
 
+Potrzebujesz pomocy z instalacją lub personalizacją?
+
+[![Kontakt na Telegramie](https://img.shields.io/badge/Kontakt%20na-Telegram-229ED9?logo=telegram&logoColor=white)](https://t.me/t00116)
+
 ## Szybki start w Windows
 
 ```powershell

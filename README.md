@@ -14,6 +14,10 @@ Open-source marketplace opportunity intelligence platform.
 
 **Current v1: iPhone deals on OLX Poland.** FlipFinder finds potentially undervalued listings using persistent market benchmarks, AI-assisted risk analysis, deterministic resale estimation, and profitability scoring.
 
+Need help with setup or customization?
+
+[![Contact on Telegram](https://img.shields.io/badge/Contact%20on-Telegram-229ED9?logo=telegram&logoColor=white)](https://t.me/t00116)
+
 **Vision:** configurable product profiles across multiple marketplaces. This is future direction, not a v1 capability.
 
 ![FlipFinder dashboard](docs/screenshots/dashboard-ru.png)
