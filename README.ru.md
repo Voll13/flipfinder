@@ -43,6 +43,27 @@ FlipFinder не гарантирует безопасность или приб�
 
 Не используется CAPTCHA bypass, stealth evasion, proxy bypass или cookie theft. При challenge остановите работу безопасно.
 
+## Поддержка и индивидуальная настройка
+
+FlipFinder остаётся бесплатным open-source проектом.
+
+Если нужна помощь с установкой, настройкой или адаптацией FlipFinder под конкретную задачу, можно заказать индивидуальную помощь.
+
+Услуги:
+
+- установка и настройка
+- подключение Telegram и Groq
+- индивидуальные поисковые профили
+- правила мониторинга под конкретные товары
+- интеграция новых площадок
+- частная кастомизация и автоматизация
+- адаптация под бизнес-задачи
+
+[![Связаться в Telegram](https://img.shields.io/badge/Связаться%20в-Telegram-229ED9?logo=telegram&logoColor=white)](https://t.me/t00116)
+[![Проекты Mafia DEV](https://img.shields.io/badge/Mafia%20DEV-Проекты-5B5BD6)](https://t.me/ProjectMafia)
+
+Платная помощь является дополнительной услугой. Open-source версия FlipFinder остаётся бесплатной.
+
 ## Лицензия
 
 FlipFinder распространяется по лицензии GNU Affero General Public License v3.0 (AGPL-3.0-only).

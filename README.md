@@ -98,11 +98,28 @@ The repository includes only reviewed UI screenshots. It does not include produc
 
 FlipFinder does not guarantee that a listing is safe or profitable. AI and risk output are advisory only. Independently verify the seller, device ownership, IMEI, iCloud and Face ID status, payment method, physical condition, and current marketplace rules before acting.
 
-## Support the project
+## Support & Custom Setup
 
-- Star and share the repository after publication.
-- Report bugs and contribute improvements.
-- Sponsorship options may be added later; no donation link is configured yet.
+FlipFinder is free and open source.
+
+Star and share the repository, report bugs, and contribute improvements to support the Community edition.
+
+If you need help with installation, configuration, or adapting FlipFinder to your workflow, custom assistance is available.
+
+Possible services:
+
+- Installation and configuration
+- Telegram / Groq setup
+- Custom search profiles
+- Product-specific monitoring rules
+- Marketplace integrations
+- Private customization and automation
+- Business-specific adaptations
+
+[![Contact on Telegram](https://img.shields.io/badge/Contact%20on-Telegram-229ED9?logo=telegram&logoColor=white)](https://t.me/t00116)
+[![Mafia DEV Projects](https://img.shields.io/badge/Mafia%20DEV-Projects-5B5BD6)](https://t.me/ProjectMafia)
+
+Commercial assistance is optional. The open-source FlipFinder Community edition remains free.
 
 ## License
 
