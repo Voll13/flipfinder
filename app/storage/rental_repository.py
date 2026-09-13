@@ -139,10 +139,14 @@ class RentalRepository:
                 (listing.source, listing.source_listing_id),
             )).fetchone()
             if row is None:
+                values = self._listing_values(listing)
                 cursor = await conn.execute(
                     """INSERT INTO rental_listings(source,source_listing_id,canonical_url,title,country_code,city,published_at,district,address_text,latitude,longitude,property_type,rooms,area_m2,floor_label,total_floors,rent_price_pln,admin_fee_pln,utilities_text,deposit_pln,furnished,balcony,elevator,parking,pets_policy,advertiser_type,agency_name,description,image_urls,main_image_url,source_attributes_json,first_seen_at,last_seen_at,is_active,created_at,updated_at)
                     VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-                    (listing.source, listing.source_listing_id, *self._listing_values(listing), _iso(listing.first_seen_at), _iso(now), _iso(now)),
+                    (
+                        listing.source, listing.source_listing_id, *values[:-2], _iso(listing.first_seen_at),
+                        values[-2], values[-1], _iso(now), _iso(now),
+                    ),
                 )
                 listing_id = int(cursor.lastrowid)
                 await conn.execute(
