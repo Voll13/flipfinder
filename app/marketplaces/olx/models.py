@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from datetime import datetime
+from decimal import Decimal, InvalidOperation
 from typing import Any, Literal
 from urllib.parse import urljoin
 
@@ -26,6 +27,8 @@ class OLXRawListing:
     currency: str
     location_text: str | None
     raw_location: dict[str, Any]
+    latitude: Decimal | None
+    longitude: Decimal | None
     description: str | None
     image_urls: list[str]
     seller_type: SellerType | None
@@ -59,6 +62,17 @@ def _location(ad: dict[str, Any]) -> tuple[str | None, dict[str, Any]]:
         return None, {}
     values = list(dict.fromkeys(value for value in (_text(raw.get(key)) for key in ("cityName", "districtName", "regionName")) if value))
     return (", ".join(values) if values else _text(raw.get("pathName"))), dict(raw)
+
+
+def _coordinate(value: object) -> Decimal | None:
+    """Keep finite numeric OLX coordinates without inferring a location."""
+    if isinstance(value, bool) or not isinstance(value, (str, int, float, Decimal)):
+        return None
+    try:
+        coordinate = Decimal(str(value))
+    except (InvalidOperation, ValueError):
+        return None
+    return coordinate if coordinate.is_finite() else None
 
 
 def _published_at(value: object) -> datetime | None:
@@ -96,7 +110,13 @@ def _params(ad: dict[str, Any]) -> dict[str, str]:
         if not isinstance(item, dict) or not isinstance(item.get("key"), str):
             continue
         key = _text(item["key"])
-        value = _text(item.get("normalizedValue", item.get("value")))
+        raw_value = item.get("normalizedValue")
+        if isinstance(raw_value, list):
+            value = ", ".join(text for item_value in raw_value if (text := _text(item_value))) or None
+        else:
+            value = _text(raw_value)
+        if value is None:
+            value = _text(item.get("value"))
         if key and value:
             result[key] = value
     return result
@@ -112,11 +132,13 @@ def raw_listing_from_ad(ad: dict[str, Any]) -> OLXRawListing | None:
         logger.warning("Skipping malformed OLX ad")
         return None
     location_text, raw_location = _location(ad)
+    raw_map = ad.get("map") if isinstance(ad.get("map"), dict) else {}
     business = ad.get("isBusiness")
     seller_type: SellerType | None = "business" if business is True else "private" if business is False else None
     return OLXRawListing(
         source_listing_id=str(ident), canonical_url=urljoin("https://www.olx.pl/", url), title=title,
         price=price[0], currency=price[1], location_text=location_text, raw_location=raw_location,
+        latitude=_coordinate(raw_map.get("lat")), longitude=_coordinate(raw_map.get("lon")),
         description=_description(ad.get("description")), image_urls=_images(ad), seller_type=seller_type,
         published_at=_published_at(ad.get("createdTime")), params=_params(ad),
     )

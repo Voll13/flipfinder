@@ -7,16 +7,22 @@
           "url": "/d/oferta/mieszkanie-opole-IDrental100.html",
           "title": "Mieszkanie do wynajęcia w Opolu",
           "price": {"regularPrice": {"value": "3300", "currencyCode": "PLN"}},
-          "location": {"cityName": "Opole", "districtName": "Śródmieście", "regionName": "opolskie"},
+          "location": {"cityName": "Opole", "regionName": "opolskie", "pathName": "opolskie, Opole"},
+          "map": {"lat": 50.675, "lon": 17.92},
           "createdTime": "2026-09-10T16:18:00+02:00",
           "isBusiness": true,
           "description": "<p>Opis oferty</p>",
           "photos": ["https://images.example/rental-1.jpg", "https://images.example/rental-1.jpg", "https://images.example/rental-2.jpg"],
           "params": [
-            {"key": "unverified_area", "normalizedValue": "55,5 m²"},
-            {"key": "unverified_rooms", "normalizedValue": "2 pokoje"},
-            {"key": "unverified_floor", "normalizedValue": "parter"},
-            {"key": "unverified_feature", "normalizedValue": "wartość"}
+            {"key": "rooms", "normalizedValue": "two"},
+            {"key": "m", "normalizedValue": "55,5"},
+            {"key": "floor_select", "normalizedValue": "floor_2"},
+            {"key": "rent", "normalizedValue": " 650 "},
+            {"key": "furniture", "normalizedValue": "yes"},
+            {"key": "winda", "normalizedValue": "Tak"},
+            {"key": "pets", "normalizedValue": "Nie"},
+            {"key": "parking", "normalizedValue": ["w garażu", "przynależne na ulicy"]},
+            {"key": "builttype", "normalizedValue": "apartamentowiec"}
           ]
         }
       ]
